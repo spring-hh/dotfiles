@@ -1,9 +1,5 @@
 #!/bin/zsh
 echo "1. ~/dotfiles にいることを確認"
-echo ""
-echo "`pwd`  pwd"
-echo "$HOME/dotfiles  \$HOME/dotfiles"
-
 if [ `pwd` = "$HOME/dotfiles" ]; then
   echo "[OK]"
 fi
