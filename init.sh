@@ -6,11 +6,12 @@ fi
 echo ""
 
 echo "2. 現在の設定のバックアップ"
-rm -rf backup
-mkdir backup && mv ~/.zshrc backup
+rm -rf .backup
+mkdir .backup && mv ~/.zshrc ~/.helpfile .backup
 echo "[OK]"
 echo ""
 
 echo "3. シンボリックリンク作成"
 ln -s ~/dotfiles/.zshrc ~
+ln -s ~/dotfiles/.helpfile ~
 echo "[OK]"

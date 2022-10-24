@@ -3,10 +3,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-alias dot='cd ~/dotfiles'
 alias p='cd ~/Desktop/Project'
 alias d='cd ~/Downloads'
+alias ds='cd ~/Desktop'
+alias dt='cd ~/dotfiles'
 alias zshrc='vi ~/.zshrc'
+alias vh='vi ~/.helpfile'
 alias scz='source ~/.zshrc'
 alias dup='docker-compose up -d'
 alias ddo='docker-compose down'
@@ -18,3 +20,4 @@ alias gp='git push'
 alias gl='git log'
 alias ll='ls -l'
 alias la='ls -la'
+alias h='less ~/dotfiles/.helpfile'
