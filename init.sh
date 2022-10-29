@@ -15,3 +15,8 @@ echo "3. シンボリックリンク作成"
 ln -s ~/dotfiles/.zshrc ~
 ln -s ~/dotfiles/.helpfile ~
 echo "[OK]"
+echo ""
+
+echo "4. git-secretsを設定"
+git secrets --register-aws --global
+echo "[OK]"
