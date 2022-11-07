@@ -20,3 +20,5 @@ echo ""
 echo "4. git-secretsを設定"
 git secrets --register-aws --global
 echo "[OK]"
+
+mkdir ~/.nvm
