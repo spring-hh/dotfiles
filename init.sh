@@ -14,6 +14,7 @@ echo ""
 echo "3. シンボリックリンク作成"
 ln -s ~/dotfiles/.zshrc ~
 ln -s ~/dotfiles/.helpfile ~
+ln -s ~/dotfiles/.vimrc ~
 echo "[OK]"
 echo ""
 
