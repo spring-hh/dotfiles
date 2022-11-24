@@ -1,24 +1,11 @@
-check_pyenv() {
-  pyenv_ver=$($1 2>/dev/null)
-  if [[ $pyenv_ver == *found* ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-  fi
-}
-check_pyenv 'pyenv --version'
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-# settings for nvm
-check_nvm() {
-  node_path=$($1 2>/dev/null)
-  if [[ $node_path != *nvm* ]]; then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
-    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
-  fi
-}
-check_nvm 'which node'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
 
 alias p='cd ~/Desktop/Project'
 alias d='cd ~/Downloads'
