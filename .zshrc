@@ -55,6 +55,8 @@ alias wh='which'
 alias dfp='cd ~/Desktop/Project/StableDiffusion/M1/stable-diffusion && source venv/bin/activate'
 alias dfg='python3 scripts/txt2img.py --n_samples 1 --n_iter 1 --plms --prompt'
 alias spi='spring init --build=gradle --boot-version=2.7.6 --java-version=17 --dependencies=web,security,thymeleaf,devtools --packaging=war --type=gradle-project'
+alias apa='conda activate coreml_stable_diffusion310 && cd ~/Desktop/Project/StableDiffusion/apple-official/ml-stable-diffusion'
+alias apg='python -m python_coreml_stable_diffusion.pipeline -i out -o images --compute-unit ALL --seed 93 --prompt'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
