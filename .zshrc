@@ -1,15 +1,3 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
-
-alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
-alias tmp='cd ~/tmp'
 alias p='cd ~/Desktop/Project'
 alias d='cd ~/Downloads'
 alias ds='cd ~/Desktop'
@@ -41,7 +29,6 @@ alias h='less ~/dotfiles/.helpfile'
 alias pwdc='pwd | tr -d "\n" | pbcopy'
 alias cdi='cdk init sample-app --language=typescript'
 alias cpe='cp ~/dotfiles/.editorconfig .'
-alias ncu='npx npm-check-updates'
 alias f='find . -name'
 alias bup='brew update'
 alias bug='brew upgrade'
@@ -52,22 +39,18 @@ alias o3='open http://localhost:3000'
 alias o8='open http://localhost:8000'
 alias o80='open http://localhost:80'
 alias wh='which'
-alias dfp='cd ~/Desktop/Project/StableDiffusion/M1/stable-diffusion && source venv/bin/activate'
-alias dfg='python3 scripts/txt2img.py --n_samples 1 --n_iter 1 --plms --prompt'
 alias spi='spring init --build=gradle --boot-version=2.7.6 --java-version=17 --dependencies=web,security,thymeleaf,devtools --packaging=war --type=gradle-project'
-alias apa='conda activate coreml_stable_diffusion310 && cd ~/Desktop/Project/StableDiffusion/apple-official/ml-stable-diffusion'
-alias apg='python -m python_coreml_stable_diffusion.pipeline -i out -o images --compute-unit ALL --seed 93 --prompt'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
