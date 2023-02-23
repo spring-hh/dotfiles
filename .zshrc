@@ -1,4 +1,5 @@
-alias p='cd ~/Desktop/Project'
+alias ncu='npx npm-check-updates'
+alias p='cd ~/Desktop/All/Project'
 alias d='cd ~/Downloads'
 alias ds='cd ~/Desktop'
 alias dt='cd ~/dotfiles'
