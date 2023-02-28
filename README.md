@@ -9,4 +9,5 @@ $ chmod +x init.sh
 $ ./init.sh
 $ source ~/.zshrc
 $ brew bundle
+$ npm install -g @aws-amplify/cli
 ```
