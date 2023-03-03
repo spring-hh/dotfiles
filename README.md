@@ -10,4 +10,5 @@ $ ./init.sh
 $ source ~/.zshrc
 $ brew bundle
 $ npm install -g @aws-amplify/cli
+$ git config --global --edit 
 ```
