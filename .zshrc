@@ -44,6 +44,9 @@ alias o8='open http://localhost:8000'
 alias o80='open http://localhost:80'
 alias wh='which'
 alias spi='spring init --build=gradle --boot-version=2.7.6 --java-version=17 --dependencies=web,security,thymeleaf,devtools --packaging=war --type=gradle-project'
+alias els="aws ec2 describe-instances --query 'Reservations[].Instances[].[InstanceId, PublicIpAddress, PrivateIpAddress, InstanceType, State.Name, Tags[?Key==\`Name\`].Value | [0]]' --output table"
+alias esta='aws ec2 start-instances --instance-ids'
+alias esto='aws ec2 stop-instances --instance-ids'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
