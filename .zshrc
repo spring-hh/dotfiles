@@ -37,6 +37,7 @@ alias f='find . -name'
 alias bup='brew update'
 alias bug='brew upgrade'
 alias a='alias'
+alias b='brew update && brew upgrade'
 alias ag='alias | grep'
 alias og='open https://github.com/'
 alias o3='open http://localhost:3000'
@@ -48,18 +49,5 @@ alias els="aws ec2 describe-instances --query 'Reservations[].Instances[].[Insta
 alias esta='aws ec2 start-instances --instance-ids'
 alias esto='aws ec2 stop-instances --instance-ids'
 alias ecrls="aws ecr describe-repositories --query 'repositories[].repositoryName' --output text"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+alias cur="cursor"
+alias lr="ls -ltr"
